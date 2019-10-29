@@ -1,0 +1,45 @@
+﻿.container {
+    margin-top: calc(91px + 45.6px);
+    padding: 16px;
+    background-color: white;
+}
+
+#form-register label{
+    min-width: 144px;
+    display: inline-block;
+}
+
+input[type=text], input[type=password], input[type=number]{
+    max-width: 540px;
+    min-width: 250px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 1px solid;
+    background: #f1f1f1;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #f1f1f1;
+        outline: none;
+    }
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    max-width: 540px;
+    min-width: 360px;
+    opacity: 0.9;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    text-align: center;
+}

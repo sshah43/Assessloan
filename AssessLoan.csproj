@@ -1,0 +1,317 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE25F553-6D3A-49AE-8AE4-6DD86D111373}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssessLoan</RootNamespace>
+    <AssemblyName>AssessLoan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.html" />
+    <Content Include="ContactUs.html" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\navigation.css" />
+    <Content Include="Content\register.css" />
+    <Content Include="Home.html" />
+    <Content Include="Images\img_avatar2.png" />
+    <Content Include="JavaScript\app.js" />
+    <Content Include="JavaScript\jquery-3.4.1.min.js" />
+    <Content Include="JavaScript\navigation.js" />
+    <Content Include="JavaScript\require.js" />
+    <Content Include="NewLoan.html" />
+    <Content Include="node_modules\ejs\ejs.js" />
+    <Content Include="node_modules\ejs\ejs.min.js" />
+    <Content Include="node_modules\ejs\lib\ejs.js" />
+    <Content Include="node_modules\ejs\lib\utils.js" />
+    <Content Include="node_modules\express\index.js" />
+    <Content Include="node_modules\express\lib\application.js" />
+    <Content Include="node_modules\express\lib\express.js" />
+    <Content Include="node_modules\express\lib\middleware\init.js" />
+    <Content Include="node_modules\express\lib\middleware\query.js" />
+    <Content Include="node_modules\express\lib\request.js" />
+    <Content Include="node_modules\express\lib\response.js" />
+    <Content Include="node_modules\express\lib\router\index.js" />
+    <Content Include="node_modules\express\lib\router\layer.js" />
+    <Content Include="node_modules\express\lib\router\route.js" />
+    <Content Include="node_modules\express\lib\utils.js" />
+    <Content Include="node_modules\express\lib\view.js" />
+    <Content Include="node_modules\mongodb\index.js" />
+    <Content Include="node_modules\mongodb\lib\admin.js" />
+    <Content Include="node_modules\mongodb\lib\aggregation_cursor.js" />
+    <Content Include="node_modules\mongodb\lib\apm.js" />
+    <Content Include="node_modules\mongodb\lib\async\async_iterator.js" />
+    <Content Include="node_modules\mongodb\lib\bulk\common.js" />
+    <Content Include="node_modules\mongodb\lib\bulk\ordered.js" />
+    <Content Include="node_modules\mongodb\lib\bulk\unordered.js" />
+    <Content Include="node_modules\mongodb\lib\change_stream.js" />
+    <Content Include="node_modules\mongodb\lib\collection.js" />
+    <Content Include="node_modules\mongodb\lib\command_cursor.js" />
+    <Content Include="node_modules\mongodb\lib\constants.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\auth_provider.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\defaultAuthProviders.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\gssapi.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\mongocr.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\mongo_credentials.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\plain.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\scram.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\sspi.js" />
+    <Content Include="node_modules\mongodb\lib\core\auth\x509.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\apm.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\commands.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\command_result.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\connect.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\connection.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\logger.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\msg.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\pool.js" />
+    <Content Include="node_modules\mongodb\lib\core\connection\utils.js" />
+    <Content Include="node_modules\mongodb\lib\core\cursor.js" />
+    <Content Include="node_modules\mongodb\lib\core\error.js" />
+    <Content Include="node_modules\mongodb\lib\core\index.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\monitoring.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\server.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\server_description.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\server_selectors.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\srv_polling.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\topology.js" />
+    <Content Include="node_modules\mongodb\lib\core\sdam\topology_description.js" />
+    <Content Include="node_modules\mongodb\lib\core\sessions.js" />
+    <Content Include="node_modules\mongodb\lib\core\tools\smoke_plugin.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\mongos.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\read_preference.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\replset.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\replset_state.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\server.js" />
+    <Content Include="node_modules\mongodb\lib\core\topologies\shared.js" />
+    <Content Include="node_modules\mongodb\lib\core\transactions.js" />
+    <Content Include="node_modules\mongodb\lib\core\uri_parser.js" />
+    <Content Include="node_modules\mongodb\lib\core\utils.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\command.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\compression.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\constants.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\get_more.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\index.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\kill_cursors.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\query.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\shared.js" />
+    <Content Include="node_modules\mongodb\lib\core\wireprotocol\write_command.js" />
+    <Content Include="node_modules\mongodb\lib\cursor.js" />
+    <Content Include="node_modules\mongodb\lib\db.js" />
+    <Content Include="node_modules\mongodb\lib\dynamic_loaders.js" />
+    <Content Include="node_modules\mongodb\lib\error.js" />
+    <Content Include="node_modules\mongodb\lib\gridfs-stream\download.js" />
+    <Content Include="node_modules\mongodb\lib\gridfs-stream\index.js" />
+    <Content Include="node_modules\mongodb\lib\gridfs-stream\upload.js" />
+    <Content Include="node_modules\mongodb\lib\gridfs\chunk.js" />
+    <Content Include="node_modules\mongodb\lib\gridfs\grid_store.js" />
+    <Content Include="node_modules\mongodb\lib\mongo_client.js" />
+    <Content Include="node_modules\mongodb\lib\operations\add_user.js" />
+    <Content Include="node_modules\mongodb\lib\operations\admin_ops.js" />
+    <Content Include="node_modules\mongodb\lib\operations\aggregate.js" />
+    <Content Include="node_modules\mongodb\lib\operations\bulk_write.js" />
+    <Content Include="node_modules\mongodb\lib\operations\close.js" />
+    <Content Include="node_modules\mongodb\lib\operations\collections.js" />
+    <Content Include="node_modules\mongodb\lib\operations\collection_ops.js" />
+    <Content Include="node_modules\mongodb\lib\operations\command.js" />
+    <Content Include="node_modules\mongodb\lib\operations\command_v2.js" />
+    <Content Include="node_modules\mongodb\lib\operations\common_functions.js" />
+    <Content Include="node_modules\mongodb\lib\operations\connect.js" />
+    <Content Include="node_modules\mongodb\lib\operations\count.js" />
+    <Content Include="node_modules\mongodb\lib\operations\count_documents.js" />
+    <Content Include="node_modules\mongodb\lib\operations\create_collection.js" />
+    <Content Include="node_modules\mongodb\lib\operations\create_index.js" />
+    <Content Include="node_modules\mongodb\lib\operations\create_indexes.js" />
+    <Content Include="node_modules\mongodb\lib\operations\cursor_ops.js" />
+    <Content Include="node_modules\mongodb\lib\operations\db_ops.js" />
+    <Content Include="node_modules\mongodb\lib\operations\delete_many.js" />
+    <Content Include="node_modules\mongodb\lib\operations\delete_one.js" />
+    <Content Include="node_modules\mongodb\lib\operations\distinct.js" />
+    <Content Include="node_modules\mongodb\lib\operations\drop.js" />
+    <Content Include="node_modules\mongodb\lib\operations\drop_index.js" />
+    <Content Include="node_modules\mongodb\lib\operations\drop_indexes.js" />
+    <Content Include="node_modules\mongodb\lib\operations\estimated_document_count.js" />
+    <Content Include="node_modules\mongodb\lib\operations\execute_db_admin_command.js" />
+    <Content Include="node_modules\mongodb\lib\operations\execute_operation.js" />
+    <Content Include="node_modules\mongodb\lib\operations\explain.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find_and_modify.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find_one.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find_one_and_delete.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find_one_and_replace.js" />
+    <Content Include="node_modules\mongodb\lib\operations\find_one_and_update.js" />
+    <Content Include="node_modules\mongodb\lib\operations\geo_haystack_search.js" />
+    <Content Include="node_modules\mongodb\lib\operations\has_next.js" />
+    <Content Include="node_modules\mongodb\lib\operations\indexes.js" />
+    <Content Include="node_modules\mongodb\lib\operations\index_exists.js" />
+    <Content Include="node_modules\mongodb\lib\operations\index_information.js" />
+    <Content Include="node_modules\mongodb\lib\operations\insert_many.js" />
+    <Content Include="node_modules\mongodb\lib\operations\insert_one.js" />
+    <Content Include="node_modules\mongodb\lib\operations\is_capped.js" />
+    <Content Include="node_modules\mongodb\lib\operations\list_collections.js" />
+    <Content Include="node_modules\mongodb\lib\operations\list_databases.js" />
+    <Content Include="node_modules\mongodb\lib\operations\list_indexes.js" />
+    <Content Include="node_modules\mongodb\lib\operations\map_reduce.js" />
+    <Content Include="node_modules\mongodb\lib\operations\next.js" />
+    <Content Include="node_modules\mongodb\lib\operations\operation.js" />
+    <Content Include="node_modules\mongodb\lib\operations\options_operation.js" />
+    <Content Include="node_modules\mongodb\lib\operations\profiling_level.js" />
+    <Content Include="node_modules\mongodb\lib\operations\remove_user.js" />
+    <Content Include="node_modules\mongodb\lib\operations\rename.js" />
+    <Content Include="node_modules\mongodb\lib\operations\replace_one.js" />
+    <Content Include="node_modules\mongodb\lib\operations\re_index.js" />
+    <Content Include="node_modules\mongodb\lib\operations\set_profiling_level.js" />
+    <Content Include="node_modules\mongodb\lib\operations\stats.js" />
+    <Content Include="node_modules\mongodb\lib\operations\to_array.js" />
+    <Content Include="node_modules\mongodb\lib\operations\update_many.js" />
+    <Content Include="node_modules\mongodb\lib\operations\update_one.js" />
+    <Content Include="node_modules\mongodb\lib\operations\validate_collection.js" />
+    <Content Include="node_modules\mongodb\lib\read_concern.js" />
+    <Content Include="node_modules\mongodb\lib\topologies\mongos.js" />
+    <Content Include="node_modules\mongodb\lib\topologies\native_topology.js" />
+    <Content Include="node_modules\mongodb\lib\topologies\replset.js" />
+    <Content Include="node_modules\mongodb\lib\topologies\server.js" />
+    <Content Include="node_modules\mongodb\lib\topologies\topology_base.js" />
+    <Content Include="node_modules\mongodb\lib\url_parser.js" />
+    <Content Include="node_modules\mongodb\lib\utils.js" />
+    <Content Include="node_modules\mongodb\lib\write_concern.js" />
+    <Content Include="node_modules\templatesjs\index.js" />
+    <Content Include="node_modules\templatesjs\test\test.js" />
+    <Content Include="node_modules\templatesjs\test\test.txt" />
+    <Content Include="server.js" />
+    <Content Include="shared\footer.html" />
+    <Content Include="shared\header.html" />
+    <Content Include="Signin.html" />
+    <Content Include="Register.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libman.json" />
+    <Content Include="node_modules\templatesjs\.npmignore" />
+    <Content Include="node_modules\templatesjs\.travis.yml" />
+    <Content Include="node_modules\templatesjs\package.json" />
+    <Content Include="node_modules\templatesjs\README.md" />
+    <Content Include="package.json" />
+    <Content Include="node_modules\mongodb\HISTORY.md" />
+    <Content Include="node_modules\mongodb\lib\async\.eslintrc" />
+    <Content Include="node_modules\mongodb\LICENSE.md" />
+    <Content Include="node_modules\mongodb\package.json" />
+    <Content Include="node_modules\mongodb\README.md" />
+    <Content Include="node_modules\ejs\Jakefile" />
+    <Content Include="node_modules\ejs\LICENSE" />
+    <Content Include="node_modules\ejs\package.json" />
+    <Content Include="node_modules\ejs\README.md" />
+    <Content Include="node_modules\express\History.md" />
+    <Content Include="node_modules\express\LICENSE" />
+    <Content Include="node_modules\express\package.json" />
+    <Content Include="node_modules\express\Readme.md" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51562</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51562/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
