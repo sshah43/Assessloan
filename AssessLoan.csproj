@@ -67,17 +67,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.html" />
+    <Content Include="Content\modals.css" />
+    <Content Include="MyAccount.html" />
     <Content Include="ContactUs.html" />
     <Content Include="Content\common.css" />
+    <Content Include="Content\ContactUs.css" />
     <Content Include="Content\navigation.css" />
+    <Content Include="Content\Newloan.css" />
     <Content Include="Content\register.css" />
     <Content Include="Home.html" />
     <Content Include="Images\img_avatar2.png" />
     <Content Include="JavaScript\app.js" />
     <Content Include="JavaScript\jquery-3.4.1.min.js" />
+    <Content Include="JavaScript\lenders.js" />
     <Content Include="JavaScript\navigation.js" />
+    <Content Include="JavaScript\newloan.js" />
     <Content Include="JavaScript\require.js" />
+    <Content Include="lenders.html" />
     <Content Include="NewLoan.html" />
     <Content Include="node_modules\ejs\ejs.js" />
     <Content Include="node_modules\ejs\ejs.min.js" />

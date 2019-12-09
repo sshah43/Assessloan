@@ -6,26 +6,105 @@
     <script src="JavaScript/jquery-3.4.1.min.js"></script>
     <script src="JavaScript/app.js"></script>
     <link href="Content/Newloan.css" rel="stylesheet" />
+    <script src="JavaScript/newloan.js"></script>
+    <script src="JavaScript/lenders.js"></script>
 </head>
 <body>
     <section id="header"></section>
     <div class="content">
-        <h2>Types of Loans:</h2>
-        <div class="row">
-            <div class="column">
-                <img src="Images/car-images.jpg" alt="Car Loan" style="width:100%">
+        <form id="newloan" method="post">
+            <div class="container">
+                <p>Please fill in this form to apply for a New Loan</p>
+                <hr>
+                <div class="left">
+                    <div>
+                        <label for="FirstName"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" id="txt-fname" name="FirstName" required>
+                    </div>
+                    <div>
+                        <label for="LastName"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" id="txt-lname" name="LastName" required>
+                    </div>
+                    <div>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" id="txt-email" name="EmailAddress" required>
+                    </div>
+                    <div>
+                        <label for="SSN"><b>Social Security Number</b></label>
+                        <input type="number" placeholder="Enter SSN" id="txt-ssn" name="SSN" required>
+                    </div>
+                    <div>
+                        <label for="ContactNumber"><b>Contact Number</b></label>
+                        <input type="number" placeholder="Enter Contact Number" id="txt-contact" name="ContactNumber" required>
+                    </div>
+                    <div>
+                        <label for="Dateofbirth"><b>Date Of Birth</b></label>
+                        <input type="text" placeholder="mm/dd/yyyy" id="txt-dob" name="dateofbirth" required>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <label for="occupation"><b>Occupation</b></label>
+                        <input type="text" placeholder="Enter your Occupation" id="txt-occupation" name="occupation" required>
+                    </div>
+                    <div>
+                        <label for="AnnualIncome"><b>Annual Income</b></label>
+                        <input type="text" placeholder="Enter Annual Income" id="txt-income" name="AnnualIncome" required>
+                    </div>
+                    <div>
+                        <label for="address"><b>Address</b></label>
+                        <input type="text" name="address" placeholder="Enter your address" id="txt-address">
+                    </div>
+                    <div>
+                        <label for="select"><b>Select Loan</b></label>
+                        <select style="border:1px solid" required name="loantype" id="select-loan-type">
+                            <option value="">Select....</option>
+                            <option value="Auto">Car Loan</option>
+                            <option value="Education">Education Loan</option>
+                            <option value="Mortgage">Mortgage Loan</option>
+                            <option value="Personal">Personal Loan</option>
+                        </select>
+                    <div>
+                            <label for="LoanAmount"><b>Loan Amount</b></label>
+                            <input type="number" placeholder="Enter Loan Amount" id="txt-amount" name="LoanAmount" required>
+                    </div>
+                    </div>
+                    <div>
+                        <label for="credit score"><b>Credit Score</b></label>
+                        <select style="border:1px solid" required name="creditscore" id="select-credit-score">
+                            <option value="">Select....</option>
+                            <option value="Excellent" data-minscore="720">Excellent (720 - 850)</option>
+                            <option value="Good" data-minscore="690">Good (690 - 719)</option>
+                            <option value="Fair" data-minscore="630">Fair (630 - 689)</option>
+                            <option value="Poor" data-minscore="300">Poor (300 - 629)</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-                <img src="Images/education-loan.jpg" alt="Education Loan" style="width:100%">
+            <div class="" style="clear:both;">
+                <hr />
+                <div class="m-t-27">
+                    <button type="button" class="registerbtn" id="btn-find-lenders">Find Lenders</button>
+                </div>
             </div>
-            <div class="column">
-                <img src="Images/homeloan.jpg" alt="Home Loan" style="width:100%">
+        </form>
+    </div>
+    <section id="footer"></section>
+    <!-- The Modal -->
+    <div id="modal-lender-rates" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="$('#modal-lender-rates').css('display','none');">&times;</span>
+                <span>Rates</span>
             </div>
-            <div class="column">
-                <img src="Images/personalloan.png" alt="Personal Loan" style="width:100%">
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <span></span>
             </div>
         </div>
-    </div>        
-    <section id="footer"></section>
+    </div>
 </body>
 </html>

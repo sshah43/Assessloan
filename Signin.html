@@ -68,7 +68,7 @@
 <body>
     <section id="header"></section>
     <div class="content">
-        <form action="/action_page.php" method="post" style="max-width: 450px;margin: auto;margin-top: 172px !important;">
+        <form method="post" style="max-width: 450px;margin: auto;margin-top: 172px !important;">
             <div class="imgcontainer">
 
                 <img src="Images/img_avatar2.png" alt="Avatar" class="avatar">
@@ -76,12 +76,12 @@
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" id="txt-username" name="uname" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" id="txt-password" name="psw" required>
 
-                <button id="btn-login" type="submit">Login</button>
+                <button id="btn-login" type="button">Login</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
@@ -94,16 +94,31 @@
         </form>
     </div>
     <script type="text/javascript">
-        var x = document.getElementById("btn-login");
-        x.onclick = function () {
-            alert("Please enter username and password");
-        }
-        x.onmouseenter = function () {
-            this.style.backgroundColor = "red";
-        }
-        x.onmouseleave = function () {
-            this.style.backgroundColor = "#4CAF50";
-        }
+        $(document).ready(function () {
+            $(document).on("click", "#btn-login", function () {
+                var formData = {
+                    username: $("#txt-username").val(),
+                    password: $("#txt-password").val()
+                };
+                var options = {
+                    url: "/api/signin",
+                    data: formData,
+                    fnSuccess: function (response) {
+                        if (response.iserror) {
+                            alert(response.message);
+                        }
+                        else {
+                            sessionStorage["LoggedInUser"] = response.data;
+                            window.location.href = "NewLoan.html";
+                        }
+                    },
+                    fnError: function () {
+                        alert("kaik jhol che");
+                    }
+                };
+                AssessLoan.AjaxPost(options);
+            });
+        });
     </script>
     <section id="footer"></section>
 </body>

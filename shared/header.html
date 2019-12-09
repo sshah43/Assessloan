@@ -1,14 +1,20 @@
 ﻿<link href="Content/common.css" rel="stylesheet" />
 <link href="Content/navigation.css" rel="stylesheet" />
+<link href="Content/modals.css" rel="stylesheet" />
 <script src="JavaScript/navigation.js"></script>
 <div class="header">
     <span style="color:#3fa21b;">Assess</span><span style="color:#1f79c8;">Loan</span>
     <p>One Stop Solution</p>
+    <span id="userinfo-container" class="hidden">
+        Welcome <span id="userinfo"></span>
+    </span>
 </div>
 <div class="navigation" id="myTopnav">
-    <a href="../Home.html">Home</a>
-    <a href="../NewLoan.html">New Loan</a>
-    <a href="../AboutUs.html">About Us</a>
-    <a href="../ContactUs.html">Contact Us</a>
-    <a href="../Register.html">Register</a>
+    <a id="lnk-home" href="../Home.html">Home</a>
+    <a id="lnk-newloan" onclick="if (!sessionStorage.LoggedInUser) { window.location.href = 'Signin.html'; return false; };" href="../NewLoan.html">New Loan</a>
+    <a id="lnk-myaccount" href="../MyAccount.html">My Account</a>
+    <a id="lnk-contactus" href="../ContactUs.html">Contact Us</a>
+    <a id="lnk-register" href="../Register.html">Register</a>
+    <a id="lnk-signin" data-mode="1" class="lnk-login" href="javascript:void(0);">Sign In</a>
 </div>
+<div class="loading hidden"></div>

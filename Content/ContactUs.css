@@ -1,34 +1,49 @@
-﻿input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+﻿#form-contactus label {
+    min-width: 144px;
+    display: inline-block;
 }
 
-input[type=submit] {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#form-contactus *{
+    vertical-align: middle;
 }
 
-    input[type=submit]:hover {
-        background-color: #45a049;
+input[type=text], input[type=password], input[type=number], textarea {
+    max-width: 540px;
+    min-width: 250px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 1px solid;
+    background: #f1f1f1;
+}
+
+    input[type=text]:focus, input[type=password]:focus, textarea:focus {
+        background-color: #f1f1f1;
+        outline: none;
     }
+
+.contactbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 10px;
+    margin: 10px 0;
+    margin-left:20px;
+    cursor: pointer;
+    max-width: 540px;
+    min-width: 360px;
+    opacity: 0.9;
+}
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     padding: 20px;
     /* margin: auto; */
-    margin-left:10px;
-    margin-top:10px;
+    margin-left: 10px;
+    margin-top: 10px;
     width: 500px;
+    border: none;
     margin-top: calc(91px + 45.6px);
+    margin-bottom: 20px;
 }
+
